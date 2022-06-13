@@ -1,30 +1,37 @@
-function header () {
-    const headerText = document.createElement('div')
-    headerText.innerText = 'Authentic Philippino Food'
-    headerText.classList.add('headerText')
-   
-    return headerText
+
+function imageSlider () {
+    const imageContainer = document.createElement('div')
+    const textContainer = document.createElement('div')
+    const exploreMenuContainer = document.createElement('div')
+    const description = document.createElement('h1')
+    const description2 = document.createElement('p')
+    const checkMenuBtn = document.createElement('button')
+
+
+    imageContainer.classList.add('image-container')
+    textContainer.classList.add('text-container')
+    exploreMenuContainer.classList.add('explore-menu-container')
+
+    description.innerText = 'Authentic Fillipino Food'
+    checkMenuBtn.innerText = 'Explore Menu'
+    description2.innerText = ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate iure. Eveniet esse aliquam corporis!'
+
+    textContainer.append(description, description2)
+    exploreMenuContainer.append(checkMenuBtn)
+    imageContainer.append(textContainer, exploreMenuContainer)
+
+    return imageContainer
 }
-function para () {
-    const paraText = document.createElement('div')
-    paraText.innerText = 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Itaque quam hic maiores voluptas nobis voluptates distinctio aliquid et. Temporibus, rerum pariatur cum nobis recusandae iste!'
-    paraText.classList.add('paraText')
-
-    return paraText
-}
-
-
 
 function homeDiv () {
-    // const contentContainer = document.querySelector('.contentContainer')
     const homeDiv = document.createElement('div')
     homeDiv.classList.add('box')
     homeDiv.classList.add('homeDiv')
-    homeDiv.classList.add('active')
-    // homeDiv.innerText = 'Home'
-    // contentContainer.append(homeDiv)
-    homeDiv.appendChild(header())
-    homeDiv.appendChild(para())
+    // homeDiv.classList.add('active')
+
+    homeDiv.append(imageSlider())
+
+
     return homeDiv
 }
 

@@ -8,54 +8,62 @@
   font-family: "Roboto", sans-serif;
 }
 
+body {
+  /* outline: solid red; */
+  font-size: 1rem;
+  width: 100%;
+  height: 100vh;
+}
+
+/* NAV BAR */
 .navContainer {
   /* outline: solid red; */
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-left: 15px;
-  margin-right: 15px;
-  height: 100px;
-  background: white;
+  padding: 1rem;
+  height: 15%;
+}
+
+.hamburger {
+  display: none;
 }
 
 .buttonContainer {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 
-button {
-  margin-left: 60px;
-  font-size: 20px;
-  /* height: 90px; */
-  /* width: 75px; */
+.nav-button {
+  /* outline: solid red; */
+  font-size: 1.4rem;
   background: none;
   border: none;
   border-bottom: solid #262626 1px;
-  color: #262626;
   cursor: pointer;
+  color: #262626;
 }
 
 .logoContainer {
+  /* outline: solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 50px;
+  font-size: 3rem;
   font-family: "Yellowtail", cursive;
-  height: 90px;
-  width: 300px;
-  color: #262626;
-  border-bottom: solid #262626 1px;
+  color: #d9aa1e;
+  /* border-bottom: solid white 1px; */
   background: none;
   cursor: pointer;
 }
 
+/* ALL 3 PAGES */
 .contentContainer {
   /* outline: solid red; */
-  margin-left: 15px;
-  margin-right: 15px;
   height: 100%;
+  width: 100%;
 }
 
 .box {
@@ -65,77 +73,361 @@ button {
 
 .box.active {
   display: block;
-}
-
-.box.homeDiv.active {
-  /* background: #bfbfbf; */
-  /* outline: solid green 20px; */
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
-  height: 1000px;
+  height: 75%;
   width: 100%;
 }
 
-.homeDiv > .headerText {
+/* HOME */
+.box.homeDiv.active {
   /* outline: solid red; */
-  font-size: 60px;
+  display: flex;
+  /* height: 100%;
+  width: 100%; */
 }
 
-.homeDiv > .paraText {
+.image-container {
+  /* outline: solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 93.5vh;
+  width: 100%;
+  background: url(./img/home-page-pic.jpeg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.text-container {
+  /* outline: solid red; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 1rem;
+  width: 40%;
+  height: 50%;
+  /* border: solid white 1px;
+  border-radius: 5px; */
+}
+
+.text-container > h1 {
+  /* outline: solid red; */
+  /* font-family: "Yellowtail", cursive; */
+  font-size: 3rem;
+  border-bottom: solid #d9aa1e 1px;
+  color: white;
+}
+
+.text-container > p {
+  color: white;
+  text-align: center;
+  padding: 5rem;
+}
+
+.explore-menu-container {
   /* outline: solid red; */
   display: flex;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 30px;
-  height: 300px;
-  width: 300px;
-  border: solid #262626 2px;
-  border-radius: 5%;
-  font-size: 20px;
+  height: 50%;
+  width: 40%;
 }
 
+.explore-menu-container > button {
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: transparent;
+  color: #d9aa1e;
+  border: solid #d9aa1e 1px;
+  border-radius: 5px;
+}
+
+/* MENU */
 .box.menuDiv.active {
-  padding: 15px;
+  padding: 1rem;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  grid-row-gap: 50px;
+  grid-row-gap: 5rem;
   justify-items: center;
   height: auto;
   width: 100%;
 }
 
 .menuItem {
-  padding: 10px 15px 10px 15px;
+  padding: 1rem 1.5rem 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 0.5rem;
   border: solid #262626 2px;
   border-radius: 5%;
-}
-
-.menuImage {
-  border-radius: 5%;
+  width: 60%;
+  max-width: 400px;
 }
 
 .menuTitle {
-  margin-bottom: 10px;
-  border-bottom: solid #262626 1px;
+  width: 100%;
+  border-bottom: solid #d9aa1e 2px;
   font-family: "Yellowtail", cursive;
-  font-size: 30px;
+  font-size: 2rem;
 }
 
+.menuImage {
+  width: 100%;
+  border-radius: 5%;
+}
+
+.menuItem > button {
+  border: none;
+  background-color: transparent;
+  color: #d9aa1e;
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+
+.ingridients-container {
+  display: flex;
+  width: 100%;
+}
+
+.ingridients-container > h4 {
+  /* outline: solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+}
+
+.menuItem > p {
+  /* outline: solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: rem;
+  width: 80%;
+  /* border-bottom: solid #d9aa1e 1px; */
+  text-align: center;
+}
+
+/* CONTACT */
 .box.contactDiv.active {
-  /* background: #bfbfbf; */
-  /* outline: solid green 20px; */
+  /* outline: solid red; */
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 1000px;
+  gap: 8rem;
+  /* height: 1000px; */
   width: 100%;
+}
+
+.location-container {
+  /* outline: solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.location-container > h1 {
+  font-family: "Yellowtail", cursive;
+  font-size: 4rem;
+  border-bottom: solid #d9aa1e;
+  margin-bottom: 2rem;
+}
+
+form {
+  /* outline: solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+form > input {
+  font-size: 1.25rem;
+  width: 40%;
+  padding: 0.5rem;
+  border: solid #d9aa1e 1px;
+  border-radius: 5px;
+}
+
+form > textarea {
+  font-size: 1.25rem;
+  width: 40%;
+  padding: 0.5rem;
+  border: solid #d9aa1e 1px;
+  border-radius: 5px;
+}
+
+form > div {
+  /* outline: solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 40%;
+}
+
+form > div > button {
+  padding: 0.5rem;
+  font: 1rem;
+  border: solid black 1px;
+  color: black;
+  background: transparent;
+  width: 30%;
+}
+
+@media (max-width: 425px) {
+  .navContainer {
+    /* outline: solid red; */
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .buttonContainer {
+    /* outline: solid red; */
+    display: flex;
+    width: 100%;
+  }
+
+  .hide {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    background-color: transparent;
+  }
+
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 86.5vh;
+    /* height: 100%; */
+  }
+
+  .text-container {
+    /* outline: solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 100%;
+    margin-top: 2.5rem;
+    padding: 0.25rem;
+  }
+
+  .text-container > h1 {
+    font-size: 2rem;
+  }
+
+  .text-container > p {
+    padding: 1rem;
+  }
+
+  .explore-menu-container {
+    /* outline: solid red; */
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+
+  .explore-menu-container > button {
+    font-size: 1rem;
+    width: 50%;
+  }
+
+  /* MENU */
+  .box.menuDiv.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menuItem {
+    /* outline: solid red; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .menuTitle {
+    text-align: center;
+  }
+
+  /* CONTACT */
+  .box.contactDiv.active {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .location-container {
+    /* outline: solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .location-container > h1 {
+    /* outline: solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    font-size: 2.5rem;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    width: 100%;
+  }
+
+  form > input {
+    width: 90%;
+  }
+
+  form > textarea {
+    width: 90%;
+  }
+
+  form > div {
+    width: 100%;
+    padding: 0.25rem;
+  }
+
+  form > div > button {
+    width: 30%;
+  }
 }
