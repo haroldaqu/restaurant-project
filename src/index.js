@@ -44,6 +44,7 @@ function makeNavBar () {
     buttonContainer.append(contactBtn)
     content.append(contentContainer)
 
+    logoContainer.addEventListener('click',  tabSwitch)
     hamburgerBtn.addEventListener('click', () => buttonContainer.classList.toggle('hide'))
 
     
@@ -58,28 +59,24 @@ function tabSwitch (e) {
     const activeTabs = document.querySelectorAll('.active')
     const home = document.querySelector('.homeDiv')
     const menu = document.querySelector('.menuDiv')
-    const container = document.querySelector('.contactDiv')
+    const contact = document.querySelector('.contactDiv')
     
     activeTabs.forEach(tab => {
         tab.className = tab.className.replace('active', '')
-        
     })
     e.target.classList.add('active')
 
-    if (e.target.classList.contains('home')) {
-        home.classList.add('active')
+    if (e.target.classList.contains('contact')) {
+        contact.classList.add('active')
+
     }
     else if (e.target.classList.contains('menu')) {
         menu.classList.add('active')
     }
     else {
-        container.classList.add('active')
+        home.classList.add('active')
     }
    
-
-
-
-
 }
 
 const navButton = document.querySelectorAll('.nav-button')

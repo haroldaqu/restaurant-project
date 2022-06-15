@@ -51,7 +51,7 @@ function formItems () {
 function contactDiv () {
     const contactDiv = document.createElement('div')
     contactDiv.classList.add('box')
-    contactDiv.classList.add('active')
+    // contactDiv.classList.add('active')
     contactDiv.classList.add('contactDiv')
 
     contactDiv.append(locationItems(), formItems())

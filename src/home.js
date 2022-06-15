@@ -1,5 +1,8 @@
 
+
 function imageSlider () {
+    const menu = document.querySelector('.menuDiv')
+
     const imageContainer = document.createElement('div')
     const textContainer = document.createElement('div')
     const exploreMenuContainer = document.createElement('div')
@@ -13,12 +16,14 @@ function imageSlider () {
     exploreMenuContainer.classList.add('explore-menu-container')
 
     description.innerText = 'Authentic Fillipino Food'
-    checkMenuBtn.innerText = 'Explore Menu'
+    checkMenuBtn.innerText = 'Reserve Now'
     description2.innerText = ' Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, cupiditate iure. Eveniet esse aliquam corporis!'
 
     textContainer.append(description, description2)
     exploreMenuContainer.append(checkMenuBtn)
     imageContainer.append(textContainer, exploreMenuContainer)
+
+    // checkMenuBtn.addEventListener('click', makeMenuActive)
 
     return imageContainer
 }
@@ -27,7 +32,7 @@ function homeDiv () {
     const homeDiv = document.createElement('div')
     homeDiv.classList.add('box')
     homeDiv.classList.add('homeDiv')
-    // homeDiv.classList.add('active')
+    homeDiv.classList.add('active')
 
     homeDiv.append(imageSlider())
 
