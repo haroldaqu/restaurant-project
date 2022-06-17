@@ -21,6 +21,8 @@ function locationItems () {
     return locationContainer
 }
 
+
+
 function formItems () {
     const form = document.createElement('form')
     const nameInput = document.createElement('input')
@@ -38,15 +40,20 @@ function formItems () {
     textArea.setAttribute('cols', '30')
     textArea.setAttribute('rows', '10')
     submitBtn.innerText = 'Submit'
-    submitBtn.setAttribute('type', 'submit')
+    submitBtn.setAttribute('type', 'button')
     resetBtn.innerText = 'Reset'
     resetBtn.setAttribute('type', 'reset')
+
+
+    submitBtn.addEventListener('click', () => form.innerHTML = `Thank you ${nameInput.value}! We will get back to you as soon as we can!`)
 
     contactBtnContainer.append(submitBtn, resetBtn)
     form.append(nameInput, emailInput, textArea, contactBtnContainer)
 
     return form
 }
+
+
 
 function contactDiv () {
     const contactDiv = document.createElement('div')
@@ -55,11 +62,6 @@ function contactDiv () {
     contactDiv.classList.add('contactDiv')
 
     contactDiv.append(locationItems(), formItems())
-    // contactDiv.classList.add('contactDiv')
-    // contactDiv.append(contactItems('Address:'))
-    // contactDiv.append(contactItems('1234 Los Angeles Ave, Los Angeles, CA 90065'))
-    // contactDiv.append(contactItems('Hours:'))
-    // contactDiv.append(contactItems('Mon - Sunday 8AM - 5PM'))
     return contactDiv
     
 }

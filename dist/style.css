@@ -125,11 +125,13 @@ body {
   color: white;
   text-align: center;
   padding: 5rem;
+  font-size: 1.3rem;
 }
 
 .explore-menu-container {
   /* outline: solid red; */
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 50%;
@@ -345,8 +347,8 @@ form > div > button {
   .explore-menu-container {
     /* outline: solid red; */
     display: flex;
-    align-items: flex-end;
-    justify-content: center;
+    align-items: center;
+    justify-content:flex-end;
     padding-bottom: 3rem;
     width: 100%;
   }
